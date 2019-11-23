@@ -11,7 +11,38 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-
+const quotes = [
+  {
+    quote: 'We\'re not tools of the government or anyone else!',
+    source: 'Gray Fox',
+    citation: 'Metal Gear Solid',
+    year: '1998'
+  },
+  {
+    quote: 'I\'ll decide for myself what to believe and what to pass on!',
+    source: 'Raiden',
+    citation: 'Metal Gear Solid 2: Sons of Liberty',
+    year: '2001'
+  },
+  {
+    quote: 'You\'re pretty good.',
+    source: 'Snake',
+    citation: 'Metal Gear Solid 3: Snake Eater',
+    year: '2004'
+  },
+  {
+    quote: 'War has changed.',
+    source: 'Old Snake',
+    citation: 'Metal Gear Solid 4: Guns of the Patriots',
+    year: '2008'
+  },
+  {
+    quote: 'I won\'t scatter your sorrow to the heartless sea.',
+    source: 'Venom Snake',
+    citation: 'Metal Gear Solid V: The Phantom Pain',
+    year: '2015'
+  }
+]
 
 /***
  * `getRandomQuote` function

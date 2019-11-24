@@ -27,8 +27,8 @@ const quotes = [
   {
     quote: 'You\'re pretty good.',
     source: 'Snake',
-    citation: 'Metal Gear Solid 3: Snake Eater',
-    year: '2004'
+    //citation: 'Metal Gear Solid 3: Snake Eater',
+    //year: '2004'
   },
   {
     quote: 'War has changed.',
@@ -41,20 +41,41 @@ const quotes = [
     source: 'Venom Snake',
     citation: 'Metal Gear Solid V: The Phantom Pain',
     year: '2015'
-  }
+  },
 ]
 
 /***
  * `getRandomQuote` function
 ***/
 
-
+function getRandomQuote() {
+  return quotes[Math.floor(Math.random() * quotes.length)];
+}
 
 /***
  * `printQuote` function
 ***/
 
+function printQuote() {
+  const quote = getRandomQuote();
+  let html =
+    '<p class="quote">' + quote.quote + '</p> \n' +
+    '<p class="source">' + quote.source;
+  if (quote.citation) {
+    html += '\n <span class="citation">' + quote.citation + '</span>';
+  }
+  if (quote.year) {
+    html += '\n <span class="year">' + quote.year + '</span>';
+  }
+  if (quote.citation || quote.year) {
+    html += '\n</p>';
+  } else {
+    html += '</p>';
+  }
+  return html;
+}
 
+console.log(printQuote());
 
 /***
  * click event listener for the print quote button
